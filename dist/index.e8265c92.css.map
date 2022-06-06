@@ -1,0 +1,1 @@
+{"mappings":"AC+CA;;;;AAIA;;;;;AAKA;;;;;AAKA;;;;;;AAMA;;;;AAIA;;;;;;;ADrEA;;;;;;ACsBC;EDtBD;;;;;ACsBC;EDtBD","sources":["src/scss/style.scss","src/scss/_utilities.scss"],"sourcesContent":["@import \"utilities\";\n\nbody {\n\t@include container();\n}",null],"names":[],"version":3,"file":"index.e8265c92.css.map","sourceRoot":"/__parcel_source_root/"}

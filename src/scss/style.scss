@@ -1,0 +1,5 @@
+@import "utilities";
+
+body {
+	@include container();
+}

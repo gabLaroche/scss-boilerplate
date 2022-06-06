@@ -1,0 +1,77 @@
+$colour-name-1: #013355;
+$colour-name-2: #2374AB;
+$colour-name-3: #daebfa;
+$colour-name-4: #fafafa;
+$font-family: 'Roboto', sans-serif;
+
+$primary-colour: $colour-name-1;
+$secondary-colour: $colour-name-3;
+$link-colour: #096bcd;
+
+// responsive break-point
+$breakpoint-small: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1200px;
+$breakpoint-xlarge: 1440px;
+
+$mediaQueryBreakpoints: (
+		sm  : $breakpoint-small,
+		md  : $breakpoint-medium,
+		lg  : $breakpoint-large,
+		xlg : $breakpoint-xlarge
+);
+
+@mixin media-up($breakpointKey) {
+	@media screen and (min-width: map_get($mediaQueryBreakpoints, $breakpointKey)) {
+		@content
+	}
+}
+
+@mixin media-down($breakpointKey) {
+	@media screen and (max-width: map_get($mediaQueryBreakpoints, $breakpointKey) - 1px) {
+		@content
+	}
+}
+
+@mixin container {
+	max-width: 85vw;
+	margin: 0 auto;
+	padding: 25px;
+	@include media-up(md) {
+		max-width: 90vw;
+	}
+	@include media-up(xlg) {
+		max-width: $breakpoint-large;
+	}
+}
+
+:root {
+	font-size: 10px;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+ul {
+	padding: 0;
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color: $link-colour;
+	transition: color 0.35s ease;
+}
+
+a:hover, a:focus {
+	color: $primary-colour;
+}
+
+button {
+	padding: 0;
+	background-color: transparent;
+	font-size: 1rem;
+	font-family: $font-family;
+}

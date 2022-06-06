@@ -1,0 +1,17 @@
+{
+  "name": "scss-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:gabLaroche/scss-boilerplate.git",
+  "author": "Gabriel Laroche <gabriel@centiva.ca>",
+  "license": "MIT",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.6.0",
+    "parcel": "^2.6.0"
+  }
+}
